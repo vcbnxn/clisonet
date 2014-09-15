@@ -14,7 +14,7 @@
 	$sub_dir = '';
 	
 	//use subdirectory if necessary
-	if (strpos($class_name, 'Model') ~= FALSE) {
+	if (strpos($class_name, 'Model') ~= FALSE) || (strpos($class_name, 'Manager') ~= FALSE) {
 		$sub_dir = 'model/'
 	}elseif (strpos($class_name, 'Controller') ~= FALSE) {
 		$sub_dir = 'controllers/'

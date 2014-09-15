@@ -15,7 +15,7 @@ This is advantageous for a large system such as a social network where it may be
 We used test driven development (TDD), that is, a test case for each class was developed prior to the implementation of the class. This requires certainty in the classes' interfaces, so the application was built by first develpoment the "Model", then the "Controller" and lastly the "View".
 
 ### File Structure/Conventions
-```
+
 -src/
   |-autoload.php
   |-clisonet.php
@@ -26,7 +26,7 @@ We used test driven development (TDD), that is, a test case for each class was d
   `-views/
 	`-AbstractView.php
 -tests/
-```
+
 
 `clisonet.php` is the main entry point for the program. It should be replaced with whatever is suitable for changing the behaviour of the program, such as `httpsonet.php`. It is a plain PHP scrip that instantiates appropriate classes and calls `autoload.php` - a file used by the main application and the tests to manage the loading of various classes.
 
@@ -37,45 +37,45 @@ The program was written and tested on Crunchbang Waldorf, the default repositori
 
 You'll need an up-to-date version (>= 5.3.3) of PHP installed, with the binary available from your $PATH. As long as you have that, you should be able to run the main application without issue. Waldorf is currently using PHP 5.4.4-14+deb7u14 which features long-term security support:
 
-	```
+	
 	$ sudo apt-get install php5-common php5-cli
-	```
+	
 
 To run the included unit tests you'll also need PHPUnit. The best way is to use a Phar file, briefly:
 
-	```
+	
 	$ wget https://phar.phpunit.de/phpunit.phar
 	$ chmod +x phpunit.phar
 	$ sudo mv phpunit.phar /usr/local/bin/phpunit
 	$ phpunit --version
-	```
+	
 
 If necessary, you can find further instructions for PHPUnit install here: https://phpunit.de/manual/current/en/installation.html
 
 If you intend to work with git to pull the code, you'll also need to make sure you have that install:
 
-	```
+	
 	$ sudo apt-get install git
-	```
+	
 	
 You can also download the code over the web straight form github.
 	
 ## Running
 Clone the repository from github, then call `clisonet.php`:
 
-	```
+	
 	$ git clone https://github.com/vcbnxn/clisonet.git
 	$ cd src/
 	$ ./clisonet.php
-	```
+	
 
 ### Using the social network
 
 Each command is entered by the user in the following format:
 
-	```
+	
 	> USERNAME COMMAND PARAMS...
-	```
+	
 
 There are four basic commands:
  * Posting e.g. Alice changes her status  `>Alice -> hello, how are you`
@@ -90,12 +90,12 @@ If you need help with a command, type `help COMMAND` e.g. `> help posting`. Ente
 ### Tests
 Each class has an appropriate collection of unit tests for the public member functions. They can be run altogether using the following command:
 
-	```
+	
 	$ phpunit --bootstrap src/autoload.php tests
-	```
+	
 	
 To run a specific class, modify the following example for the User class:
 
-	```
+	
 	$ phpunit --bootstrap src/autoload.php UserTest
-	```
+	

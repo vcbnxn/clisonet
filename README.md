@@ -4,6 +4,8 @@ This readme is a brief overview with details of running the the project, the cod
 
 The code is commented using both inline commands Javadoc style block comments that can be beautified by a tool such as phpDocumentor.
 
+The coding style has been kept consistent with regards to camel case for methods, underscores for variables, semi-clon placement and tabbed indentation.
+
 ## Design
 The program is designed using an Model-View-Controller approach. This was chosen because it is a popular means of separating conerns in such systems - aspects such as the model can be easily replaced with equivalents that work from SQL or other data stores. The Controller can easily be replaced with one that handles HTTP requests rather than strings, etc.
 

@@ -39,7 +39,7 @@ abstract class AbstractController
 		//make sure the command is valid
 		try{
 			$this->validateCommand($command, $params[]);
-		} catch (Eception e) {
+		} catch (Exception e) {
 			return 'Command not found.';
 		}
 		

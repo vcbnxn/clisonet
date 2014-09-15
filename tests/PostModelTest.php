@@ -1,10 +1,10 @@
 <?php
 /**
-* This PHPUnit test tests the public functions of model/Post.php
+* This PHPUnit test tests the public functions of model/PostModel.php
 * @author Jonathan Roscoe <vcbnxn@alt42.co.uk>
 */
 
-class PostTest extends PHPUnit_Framework_TestCase
+class PostModelTest extends PHPUnit_Framework_TestCase
 {
     public function testSetAndGetUser()
     {
@@ -19,7 +19,9 @@ class PostTest extends PHPUnit_Framework_TestCase
     {
 	//create an instance of Post
 	
-	//create am instance of PostManager
+	//create an instance of PostManager
+	
+	//Confirm getTimestamp() returns a null value before saved
 	
 	//save Post
 	
